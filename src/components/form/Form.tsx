@@ -14,8 +14,9 @@ export const Form:React.FC = () => {
     },[order])
 
     useEffect(()=>{
-        tg.onEvent('mainButtonClicked',onSendData)
-        return tg.offEvent('mainButtonClicked',onSendData)
+        tg.MainButton.onClick(onSendData)
+        //@ts-ignore
+        return tg.MainButton.offClick( onSendData)
     },[onSendData])
 
     useEffect(()=>{
