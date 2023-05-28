@@ -6,7 +6,7 @@ import {Form} from "@/components/form/Form";
 
 const App: React.FC = () => {
 
-    const {tg, onToggleButton} = useTelegram()
+    const {tg} = useTelegram()
     useEffect(()=>{
         tg.ready()
     },[])
@@ -16,7 +16,7 @@ const App: React.FC = () => {
                 <Button onClick={()=>tg.close()}>Close</Button>
             </div>
             <Form/>
-            <button onClick={onToggleButton}>toggle</button>
+
 
         </>
     )

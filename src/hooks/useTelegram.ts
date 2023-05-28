@@ -1,5 +1,4 @@
 import {IUseTelegram} from "@/Types";
-import {TelegramWebApps} from "telegram-webapps-types";
 
 // @ts-ignore
 const tg = window.Telegram.WebApp

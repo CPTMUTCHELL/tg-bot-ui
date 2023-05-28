@@ -40,6 +40,7 @@ export const Form:React.FC = () => {
                        placeholder="адрес"
                        value={order.address}
                        onChange={(e)=>setOrder({...order,["address"]: e.target.value})}></input>
+                <button onClick={()=>        tg.sendData(JSON.stringify(order))}>НАЖАТЬ</button>
             </div>
         </>
     )
