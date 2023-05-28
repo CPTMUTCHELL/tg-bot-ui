@@ -13,7 +13,7 @@ const App: React.FC = () => {
     return (
         <>
             <div>
-                <Button onClick={()=>tg.close()}>Close</Button>
+                <Button onClick={()=>tg.close()}>Закрыть форму</Button>
             </div>
             <Form/>
 
