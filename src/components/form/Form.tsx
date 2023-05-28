@@ -4,7 +4,7 @@ import {useTelegram} from "@/hooks/useTelegram";
 import {IOrder} from "@/Types";
 
 export const Form:React.FC = () => {
-    const {tg} = useTelegram()
+    const {tg,user} = useTelegram()
     const [order, setOrder] = useState<IOrder>({customer:tg.initDataUnsafe?.user?.first_name.toString(),address:""})
 
     const onSendData = useCallback(()=>{
@@ -36,7 +36,7 @@ export const Form:React.FC = () => {
         <>
             <div>
                 <h3>Введите данные</h3>
-                <p>{tg.initDataUnsafe?.user?.first_name}</p>
+                <p>{user.toString()}</p>
                 <input type="text"
                        placeholder="адрес"
                        value={order.address}
