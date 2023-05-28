@@ -8,8 +8,9 @@ export const Form:React.FC = () => {
     const [order, setOrder] = useState<IOrder>({customer:tg.initDataUnsafe?.user?.first_name.toString(),address:""})
 
     const onSendData = useCallback(()=>{
-        const data = {}
-        tg.sendData(JSON.stringify(data))
+
+        tg.sendData(JSON.stringify(order))
+        console.log(order)
     },[])
 
     useEffect(()=>{
