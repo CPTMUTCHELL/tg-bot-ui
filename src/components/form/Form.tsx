@@ -20,7 +20,7 @@ export const Form:React.FC = () => {
         <>
 
             <Box component="form" className="tg-form" onSubmit={handleSubmit}>
-                <Typography variant="h3" sx={{color:"white"}}>Введите данные</Typography>
+                <Typography variant="h4" sx={{color:"black"}}>Введите данные</Typography>
                 <TextField onChange={onChange} name="address" required label="Адрес"></TextField>
                 <TextField onChange={onChange} name="brand" required label="Бренд"></TextField>
                 <TextField onChange={onChange} name="volume" required label="Обьем"></TextField>
