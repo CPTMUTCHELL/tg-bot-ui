@@ -3,12 +3,13 @@ import "./Button.scss"
 
 interface IProps{
     children: any
-    onClick:()=>void
+    onClick?:()=>void
+    type?: 'button'|'submit'
 }
 export const Button:React.FC<IProps> = (props) => {
     return (
         <div>
-            <button onClick={props.onClick} className="tg-button">{props.children}</button>
+            <button {...props} type={props.type?? "button"} onClick={props.onClick} className="tg-button">{props.children}</button>
         </div>
     );
 };
