@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "typeRoots": [
+         "./node_modules/@types",
+       "./node_modules/telegram-webapps-types"
+     ],
+    "target": "es6",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "jsx": "react-jsx"
+  },
+  "include": ["src/*",
+    "index.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
