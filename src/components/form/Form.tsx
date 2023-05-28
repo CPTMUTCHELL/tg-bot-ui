@@ -15,8 +15,7 @@ export const Form:React.FC = () => {
 
     useEffect(()=>{
         tg.MainButton.onClick(onSendData)
-        //@ts-ignore
-        return tg.MainButton.offClick( onSendData)
+        return tg.offEvent('mainButtonClicked',onSendData)
     },[onSendData])
 
     useEffect(()=>{
@@ -37,7 +36,8 @@ export const Form:React.FC = () => {
         <>
             <div>
                 <h3>Введите данные</h3>
-                <p>{user}</p>
+                <p>{user?.first_name}</p>
+                <p>{user?.id}</p>
                 <input type="text"
                        placeholder="адрес"
                        value={order.address}
