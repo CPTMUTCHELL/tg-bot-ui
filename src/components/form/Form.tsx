@@ -11,12 +11,12 @@ export const Form:React.FC = () => {
 
         tg.sendData(JSON.stringify(order))
         console.log(order)
-    },[])
+    },[order])
 
     useEffect(()=>{
         tg.onEvent('mainButtonClicked',onSendData)
         return tg.offEvent('mainButtonClicked',onSendData)
-    },[])
+    },[onSendData])
 
     useEffect(()=>{
         tg.MainButton.setParams({text:"Отправить"})
