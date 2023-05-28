@@ -36,7 +36,7 @@ export const Form:React.FC = () => {
         <>
             <div>
                 <h3>Введите данные</h3>
-                <p>{user.toString()}</p>
+                <p>{user}</p>
                 <input type="text"
                        placeholder="адрес"
                        value={order.address}
