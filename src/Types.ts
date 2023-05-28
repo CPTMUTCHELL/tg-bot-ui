@@ -3,7 +3,6 @@ import WebApp = TelegramWebApps.WebApp;
 
 export interface IUseTelegram{
     onCloseButton:()=>void
-    onToggleButton:()=>void
     tg: WebApp
     user: any
 }
