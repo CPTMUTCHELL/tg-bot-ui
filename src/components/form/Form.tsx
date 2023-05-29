@@ -7,9 +7,16 @@ import {Box, TextField, Typography} from "@mui/material";
 
 export const Form:React.FC = () => {
     const {tg} = useTelegram()
-    const [order, setOrder] = useState<IOrder>(Object)
+    const [order, setOrder] = useState<IOrder>({
+        address: "",
+        aroma: "",
+        brand: "",
+        message: "",
+        promo_code: "",
+        tel_num: "",
+        volume: "",
+        city:"Ставрополь"})
     const onChange = (e:React.ChangeEvent<HTMLInputElement>)=>{
-
         setOrder({...order,[e.target.name]:e.target.value})
     }
     const handleSubmit = (e:any) =>{
@@ -30,6 +37,7 @@ export const Form:React.FC = () => {
                 <TextField onChange={onChange} name="promo_code" label="Промокод"></TextField>
                 <TextField onChange={onChange} name="message" label="Сообщение продавцу" placeholder="Сообщение продавцу с пожеланиями, например-время доставки"></TextField>
                 <Button type="submit" >Отправить заявку</Button>
+                <button type="submit" >Отправить заявку</button>
 
             </Box>
 
