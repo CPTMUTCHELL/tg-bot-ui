@@ -37,7 +37,6 @@ export const Form:React.FC = () => {
                 <TextField onChange={onChange} name="promo_code" label="Промокод"></TextField>
                 <TextField onChange={onChange} name="message" label="Сообщение продавцу" placeholder="Сообщение продавцу с пожеланиями, например-время доставки"></TextField>
                 <Button type="submit" >Отправить заявку</Button>
-                <button type="submit" >Отправить заявку</button>
 
             </Box>
 
