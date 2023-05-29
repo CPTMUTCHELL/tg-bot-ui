@@ -8,11 +8,13 @@ export interface IUseTelegram{
     user: WebAppUser
 }
 export interface IOrder{
+    city:string
     address:string
     tel_num:string
     aroma:string
     volume:string
     brand:string
     promo_code?:string
+    message?:string
 
 }
